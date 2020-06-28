@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 8016673636708081504}
   - component: {fileID: 8016673636708081505}
   - component: {fileID: 6486777073754876686}
-  m_Layer: 0
-  m_Name: Enemy
+  - component: {fileID: 1988280174705316078}
+  - component: {fileID: 1845357659662942055}
+  m_Layer: 8
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,9 +96,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30128333e899145bc935658ae4641b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  moveSpeed: 0.075
+--- !u!114 &1988280174705316078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016673636708081518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4f290d0ba454da3b96a71a9435276b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  laserPrefab: {fileID: 1111051425336047986, guid: 614d7034c9dad4f6399292776e586935,
+    type: 3}
+  projectileSpeed: 3
+--- !u!58 &1845357659662942055
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016673636708081518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4

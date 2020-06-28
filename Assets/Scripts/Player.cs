@@ -4,11 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    [SerializeField] GameObject laserPrefab;
+    [Header("Player")]
+    [SerializeField] float health = 200f;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
+
+    [Header("Projectile")]
+    [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 1f;
     [SerializeField] float projectileFiringPeriod = 0.15f;
+
 
     float xMin;
     float xMax;
@@ -56,7 +61,14 @@ public class Player : MonoBehaviour {
         }
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision) {
+        DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
+        if (damageDealer) {
+            damageDealer.Hit();
+            health -= damageDealer.GetDamage();
+            if (health <= 0) { Destroy(gameObject); }
+        }
+    }
 
     private void SetUpMoveBoundary() {
         Camera cam = Camera.main;
