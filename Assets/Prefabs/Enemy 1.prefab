@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6486777073754876686}
   - component: {fileID: 1988280174705316078}
   - component: {fileID: 1845357659662942055}
+  - component: {fileID: -4824961518359402405}
+  - component: {fileID: -7984278382921946323}
   m_Layer: 8
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -112,9 +114,16 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  projectileSpeed: 3
+  destroyEffectAfter: 1
   laserPrefab: {fileID: 1111051425336047986, guid: 614d7034c9dad4f6399292776e586935,
     type: 3}
-  projectileSpeed: 3
+  explosionPrefab: {fileID: 8088660616096249149, guid: 3e91c8eedbcf2432d9c2efa6008634db,
+    type: 3}
+  shotSound: {fileID: 8300000, guid: f239e1b2e3c764744bda590e3bc0c5de, type: 3}
+  deathSound: {fileID: 8300000, guid: b7c1cff968d6f4b02bb1acc4585c6f8e, type: 3}
+  shotSoundVolume: 0.1
+  deathSoundVolume: 0.2
 --- !u!58 &1845357659662942055
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -125,9 +134,43 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!50 &-4824961518359402405
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016673636708081518}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-7984278382921946323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016673636708081518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef315999f3ef543f7b734185cebd6023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 300

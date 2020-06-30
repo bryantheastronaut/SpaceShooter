@@ -99,10 +99,16 @@ MonoBehaviour:
   health: 300
   moveSpeed: 10
   padding: 0.5
+  sceneManager: {fileID: 9193294741417698220, guid: a12bb9688f4884807b041fad2431e577,
+    type: 3}
   laserPrefab: {fileID: 1974410009600007657, guid: 649cf2354443b46c0b8eedb3f3a3b90f,
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.075
+  shotSound: {fileID: 8300000, guid: c7744f5ded79e4282804ad515e2eade6, type: 3}
+  deathSound: {fileID: 8300000, guid: ba292769ac85f42f9aa72233e117ac1c, type: 3}
+  shotSoundVolume: 0.05
+  deathSoundVolume: 0.35
 --- !u!50 &1481556309
 Rigidbody2D:
   serializedVersion: 4
