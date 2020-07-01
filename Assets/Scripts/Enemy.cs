@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour {
     [SerializeField] int pointValue = 100;
 
     [Header("Shot info")]
-    [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3.5f;
     [SerializeField] float projectileSpeed = 2f;
@@ -23,6 +22,8 @@ public class Enemy : MonoBehaviour {
     [SerializeField] AudioClip deathSound;
     [SerializeField] [Range(0, 1)] float shotSoundVolume = 0.1f;
     [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.2f;
+
+    float shotCounter;
 
 
     private void Start() {

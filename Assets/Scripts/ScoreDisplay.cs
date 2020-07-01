@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        scoreText = FindObjectOfType<TextMeshProUGUI>();
+        scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TextMeshProUGUI>();
         gameSession = FindObjectOfType<GameSession>();
         UpdateScore();
     }

@@ -429,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 5124909845148533972, guid: c36d80e03ecc64c5eafbbb50be63a80c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5124909845148533972, guid: c36d80e03ecc64c5eafbbb50be63a80c,
         type: 3}
@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 606410281039398917, guid: b2f11aca5e2494b9c8f536acb525d14a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 606410281039398917, guid: b2f11aca5e2494b9c8f536acb525d14a,
         type: 3}
@@ -1014,6 +1014,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451952059, guid: 3657740f56be14688a95d7b10a2b5f65, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451952059, guid: 3657740f56be14688a95d7b10a2b5f65, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451952059, guid: 3657740f56be14688a95d7b10a2b5f65, type: 3}
+      propertyPath: m_margin.x
+      value: 164.63518
+      objectReference: {fileID: 0}
     - target: {fileID: 6526729677300940977, guid: 3657740f56be14688a95d7b10a2b5f65,
         type: 3}
       propertyPath: m_Name
@@ -1057,7 +1069,7 @@ PrefabInstance:
     - target: {fileID: 6787402412818760558, guid: 3657740f56be14688a95d7b10a2b5f65,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6787402412818760558, guid: 3657740f56be14688a95d7b10a2b5f65,
         type: 3}
@@ -1131,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 3495496699664932151, guid: 2cce695c257fa47e4abf19968911df3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3495496699664932151, guid: 2cce695c257fa47e4abf19968911df3a,
         type: 3}
@@ -1245,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 8336228906937165557, guid: 4f028d3a7710f41bfad64c12932a4b92,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8336228906937165557, guid: 4f028d3a7710f41bfad64c12932a4b92,
         type: 3}

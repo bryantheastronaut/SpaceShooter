@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     [Header("Player")]
-    [SerializeField] float health = 200f;
+    [SerializeField] int health = 200;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
 
@@ -82,6 +82,8 @@ public class Player : MonoBehaviour {
         Destroy(gameObject);
         FindObjectOfType<Level>().OnGameOver();
     }
+
+    public int GetHealth() { return health; }
 
     private void SetUpMoveBoundary() {
         Camera cam = Camera.main;
