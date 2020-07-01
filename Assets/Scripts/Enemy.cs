@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour {
 
     [Header("Basic info")]
     [SerializeField] float health = 100f;
+    [SerializeField] int pointValue = 100;
 
     [Header("Shot info")]
     [SerializeField] float shotCounter;
@@ -62,6 +63,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Explode() {
+        FindObjectOfType<GameSession>().UpdateScore(pointValue);
         Destroy(gameObject);
         var explodeEffect = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explodeEffect, destroyEffectAfter);

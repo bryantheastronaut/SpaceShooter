@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour {
     [SerializeField] float delayInSeconds = 2f;
 
+    private void ResetScoreOnSceneChange() {
+        GameSession gameSession = FindObjectOfType<GameSession>();
+        if (gameSession) gameSession.ResetScore();
+    }
+
     public void OnStartGame() {
+        ResetScoreOnSceneChange();
         SceneManager.LoadScene("GameScreen");
     }
 
@@ -25,6 +31,7 @@ public class Level : MonoBehaviour {
 
     public void OnMainMenu() {
         SceneManager.LoadScene(0);
+        ResetScoreOnSceneChange();
     }
 
 }
